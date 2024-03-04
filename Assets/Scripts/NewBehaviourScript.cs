@@ -98,4 +98,9 @@ public class NewBehaviourScript : MonoBehaviour
 
         #endregion
     }
+    public void UpdateMovementSpeeds(float newWalkSpeed, float newRunSpeed)
+    {
+        walkSpeed = newWalkSpeed;
+        runSpeed = newRunSpeed;
+    }
 }
