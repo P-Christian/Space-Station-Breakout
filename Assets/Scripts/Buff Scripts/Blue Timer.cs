@@ -26,7 +26,7 @@ public class BlueTimer : MonoBehaviour
         else if (timeLeft < 0)
         {
             timeLeft = 0;
-            playerScript.UpdateMovementSpeeds(newWalkSpeed: 12f, newRunSpeed: 18f);
+            playerScript.UpdateMovementSpeeds(newWalkSpeed: 15f, newRunSpeed: 20f);
         }
 
         int seconds = Mathf.FloorToInt(timeLeft % 60);

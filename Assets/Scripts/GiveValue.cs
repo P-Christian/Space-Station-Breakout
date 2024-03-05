@@ -13,11 +13,11 @@ public class GiveValue : MonoBehaviour
         string newText = StaticData.valueToKeep;
         if (newText == "0")
         {
-            componentText.text = "Collected Components: 0/8";
+            componentText.text = "Collected Components: 0/10";
         }
         else
         {
-            componentText.text = "Collected Components: " + newText + "/8";
+            componentText.text = "Collected Components: " + newText + "/10";
         }
         
     }

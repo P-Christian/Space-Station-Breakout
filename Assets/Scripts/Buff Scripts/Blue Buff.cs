@@ -15,7 +15,7 @@ public class BlueBuff : MonoBehaviour
 
         if (playerScript != null)
         {
-            playerScript.UpdateMovementSpeeds(newWalkSpeed: 25f, newRunSpeed: 35f);
+            playerScript.UpdateMovementSpeeds(newWalkSpeed: 30f, newRunSpeed: 45f);
         }
 
         gameObject.SetActive(false);

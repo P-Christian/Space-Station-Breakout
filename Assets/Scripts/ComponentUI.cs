@@ -23,13 +23,13 @@ public class ComponentUI : MonoBehaviour
         StaticData.valueToKeep = dataToKeep;
         if (dataToKeep == "0" )
         {
-            componentText.text = "Collected Components: 0/8";
+            componentText.text = "Collected Components: 0/10";
         } else
         {
-            componentText.text = "Collected Components: " + dataToKeep + "/8";
+            componentText.text = "Collected Components: " + dataToKeep + "/10";
         }
 
-        if (playerInventory != null && playerInventory.NumOfComponents == 8)
+        if (playerInventory != null && playerInventory.NumOfComponents == 10)
         {
             componentText.text = "Go to 1st Floor and Escape the ship";
         }

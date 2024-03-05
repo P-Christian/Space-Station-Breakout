@@ -17,14 +17,14 @@ public class InstructionsScript : MonoBehaviour
                 instructionsOne.SetActive(true);
             }
         }
-        if (Input.GetKeyDown(KeyCode.RightArrow))
+        if (Input.GetKeyDown(KeyCode.O))
         {
             instructionsOne.SetActive(false);
         }
 
         if (instructionsTwo.activeSelf != true)
         {
-            if (Input.GetKeyDown(KeyCode.RightArrow))
+            if (Input.GetKeyDown(KeyCode.O))
             {
                 instructionsTwo.SetActive(true);
             }

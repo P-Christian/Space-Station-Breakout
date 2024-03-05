@@ -7,14 +7,14 @@ public class YellowBuff : MonoBehaviour
     public GameObject myObject;
     public Vector3 rotation;
     public Behaviour item1;
-    public Behaviour item2;
+    
     YellowTimer timer;
     private void OnTriggerEnter(Collider other)
     {
         timer = GameObject.FindGameObjectWithTag("YellowTimeTag").GetComponent<YellowTimer>();
         timer.SetTime(16f);
         item1.enabled = true;
-        item2.enabled = true;
+        
         gameObject.SetActive(false);
         
     }
@@ -27,7 +27,7 @@ public class YellowBuff : MonoBehaviour
         if (noOutline == "true")
         {
             item1.enabled = false;
-            item2.enabled = false;
+            
         }
     }
 }
