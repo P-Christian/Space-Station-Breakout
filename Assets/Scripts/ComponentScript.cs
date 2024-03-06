@@ -4,6 +4,7 @@ using UnityEngine;
 public class ComponentScript : MonoBehaviour
 {
     public GameObject myObject;
+    public Vector3 rotation;
     public string interactText = "Press E to interact";
     private Transform playerTransform; // Reference to the player's transform
     private bool inRange = false;
@@ -51,7 +52,7 @@ public class ComponentScript : MonoBehaviour
 
     void Update()
     {
-        // Your update logic here if needed
+        this.transform.Rotate(rotation * 2 * Time.deltaTime);
     }
 
     public void SaveState()

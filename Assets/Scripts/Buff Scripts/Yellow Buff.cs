@@ -12,9 +12,8 @@ public class YellowBuff : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
         timer = GameObject.FindGameObjectWithTag("YellowTimeTag").GetComponent<YellowTimer>();
-        timer.SetTime(16f);
+        timer.SetTime(46f);
         item1.enabled = true;
-        
         gameObject.SetActive(false);
         
     }

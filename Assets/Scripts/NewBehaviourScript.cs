@@ -14,7 +14,7 @@ public class NewBehaviourScript : MonoBehaviour
 
 
     public float lookSpeed = 2f;
-    public float lookXLimit = 45f;
+    public float lookXLimit = 5000f;
 
 
     Vector3 moveDirection = Vector3.zero;
