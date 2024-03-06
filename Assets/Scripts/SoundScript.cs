@@ -31,4 +31,6 @@ public class SoundScript : MonoBehaviour
     {
         attack.Play();
     }
+
+    
 }

@@ -11,6 +11,7 @@ TagManager:
   - BlueTimeTag
   - YellowTimeTag
   - YellowTag
+  - Alien
   layers:
   - Default
   - TransparentFX

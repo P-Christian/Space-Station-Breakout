@@ -22,6 +22,6 @@ public class GameManager : MonoBehaviour
 
     void Restart()
     {
-        SceneManager.LoadScene("Deads");
+        
     }
 }
