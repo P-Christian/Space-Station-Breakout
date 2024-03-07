@@ -17,20 +17,17 @@ public class InstructionsScript : MonoBehaviour
                 instructionsOne.SetActive(true);
             }
         }
-        if (Input.GetKeyDown(KeyCode.O))
-        {
-            instructionsOne.SetActive(false);
-        }
-
-        if (instructionsTwo.activeSelf != true)
+        if (instructionsOne.activeSelf == true)
         {
             if (Input.GetKeyDown(KeyCode.O))
             {
+                instructionsOne.SetActive(false);
                 instructionsTwo.SetActive(true);
             }
         }
         if (Input.GetKeyDown(KeyCode.Escape))
         {
+            instructionsOne.SetActive(false);
             instructionsTwo.SetActive(false);
         }
     }

@@ -4,9 +4,19 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 public class GameOver : MonoBehaviour
 {
-    public string targetSceneName;
-    public void QuitGame()
+    public GameObject DeathScreen;
+    public void gameOver()
     {
-        SceneManager.LoadScene(targetSceneName);
+        DeathScreen.SetActive(true);
+        Cursor.visible = true;
+        Cursor.lockState = CursorLockMode.None;
+    }
+    public void Restart()
+    {
+        SceneManager.LoadScene("GameScene");
+    }
+    public void BackToMenu()
+    {
+        SceneManager.LoadScene("MainMenu");
     }
 }
