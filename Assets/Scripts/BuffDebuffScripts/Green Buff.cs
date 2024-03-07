@@ -9,9 +9,13 @@ public class GreenBuff : MonoBehaviour
     
     private void OnTriggerEnter(Collider other)
     {
-        HealthBar healthBar = GameObject.FindGameObjectWithTag("HealthTag").GetComponent<HealthBar>();
-        healthBar.Heal(40);
-        gameObject.SetActive(false);
+        if (other.CompareTag("Player"))
+        {
+            HealthBar healthBar = GameObject.FindGameObjectWithTag("HealthTag").GetComponent<HealthBar>();
+            healthBar.Heal(40);
+            gameObject.SetActive(false);
+        }
+        
     }
 
     // Update is called once per frame

@@ -13,6 +13,8 @@ public class GameOver : MonoBehaviour
     }
     public void Restart()
     {
+        StaticData.valueToKeep = "0";
+        PlayerPrefs.DeleteAll();
         SceneManager.LoadScene("GameScene");
     }
     public void BackToMenu()

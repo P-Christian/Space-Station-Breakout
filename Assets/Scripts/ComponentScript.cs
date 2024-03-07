@@ -27,19 +27,23 @@ public class ComponentScript : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        PlayerInv otherPlayerInventory = other.GetComponent<PlayerInv>();
-        if (otherPlayerInventory != null && !collected)
-        {
-            SaveState();
-            collected = true;
-            gameObject.SetActive(false);
-            otherPlayerInventory.ComponentsCollected();
-        }
-
         if (other.CompareTag("Player"))
         {
-            inRange = true;
+            PlayerInv otherPlayerInventory = other.GetComponent<PlayerInv>();
+            if (otherPlayerInventory != null && !collected)
+            {
+                SaveState();
+                collected = true;
+                gameObject.SetActive(false);
+                otherPlayerInventory.ComponentsCollected();
+            }
+
+            if (other.CompareTag("Player"))
+            {
+                inRange = true;
+            }
         }
+        
     }
 
     private void OnTriggerExit(Collider other)

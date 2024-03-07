@@ -11,12 +11,15 @@ public class YellowBuff : MonoBehaviour
     YellowTimer timer;
     private void OnTriggerEnter(Collider other)
     {
-        timer = GameObject.FindGameObjectWithTag("YellowTimeTag").GetComponent<YellowTimer>();
-        timer.SetTime(46f);
-        item1.enabled = true;
-        gameObject.SetActive(false);
-        
+        if (other.CompareTag("Player"))
+        {
+            timer = GameObject.FindGameObjectWithTag("YellowTimeTag").GetComponent<YellowTimer>();
+            timer.SetTime(46f);
+            item1.enabled = true;
+            gameObject.SetActive(false);
+        }
     }
+
     void Update()
     {
         this.transform.Rotate(rotation * 10 * Time.deltaTime);

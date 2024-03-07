@@ -12,6 +12,8 @@ TagManager:
   - YellowTimeTag
   - YellowTag
   - Alien
+  - SlowTag
+  - SlowUI
   layers:
   - Default
   - TransparentFX
