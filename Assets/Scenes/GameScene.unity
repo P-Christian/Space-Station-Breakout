@@ -14619,8 +14619,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
-  m_Type: 1
+  m_Sprite: {fileID: 10913, guid: 0000000000000000f000000000000000, type: 0}
+  m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -50853,7 +50853,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialougeStrings:
-  - text: Hi Bitch
+  - text: Welcome aboard SS Nautilus! Cadet Mathews, How are you feeling?
     isEnd: 0
     isQuestion: 0
     choiceOption1: 
@@ -50866,24 +50866,26 @@ MonoBehaviour:
     endDialougeEvent:
       m_PersistentCalls:
         m_Calls: []
-  - text: Do you like bitches?
+  - text: We found your distress signal and traced it your ship.  When we found you
+      I had my ship's doctor to give medical attention.
     isEnd: 0
-    isQuestion: 1
+    isQuestion: 0
     choiceOption1: YEssss
     choiceOption2: Nuh uhh.
-    option1Indexjump: 3
-    option2Indexjump: 4
+    option1Indexjump: 2
+    option2Indexjump: 3
     startDialougeEvent:
       m_PersistentCalls:
         m_Calls: []
     endDialougeEvent:
       m_PersistentCalls:
         m_Calls: []
-  - text: Ecchi
-    isEnd: 1
+  - text: Yes, We have your package under the care our finest researcher. Last I
+      heard is that specimen x is radiating off high amounts of unknown energy.
+    isEnd: 0
     isQuestion: 0
-    choiceOption1: YEssss
-    choiceOption2: Nuh uhh.
+    choiceOption1: 0
+    choiceOption2: 0
     option1Indexjump: 0
     option2Indexjump: 0
     startDialougeEvent:
@@ -50892,11 +50894,11 @@ MonoBehaviour:
     endDialougeEvent:
       m_PersistentCalls:
         m_Calls: []
-  - text: You mother Fucker!!!!!
-    isEnd: 1
+  - text: If we can harness it's energy. We have another source of power in our hands.
+    isEnd: 0
     isQuestion: 0
-    choiceOption1: YEssss
-    choiceOption2: Nuh uhh.
+    choiceOption1: 0
+    choiceOption2: 0
     option1Indexjump: 0
     option2Indexjump: 0
     startDialougeEvent:
@@ -50905,7 +50907,76 @@ MonoBehaviour:
     endDialougeEvent:
       m_PersistentCalls:
         m_Calls: []
-  NPCTransform: {fileID: 1367143454}
+  - text: Goddammit! What's going on?!
+    isEnd: 0
+    isQuestion: 0
+    choiceOption1: 0
+    choiceOption2: 0
+    option1Indexjump: 0
+    option2Indexjump: 0
+    startDialougeEvent:
+      m_PersistentCalls:
+        m_Calls: []
+    endDialougeEvent:
+      m_PersistentCalls:
+        m_Calls: []
+  - text: Well Cadet Mathews, It seems like the inorganic igneous rock you've found
+      is an egg of an unknown species of some kind
+    isEnd: 0
+    isQuestion: 0
+    choiceOption1: 0
+    choiceOption2: 0
+    option1Indexjump: 0
+    option2Indexjump: 0
+    startDialougeEvent:
+      m_PersistentCalls:
+        m_Calls: []
+    endDialougeEvent:
+      m_PersistentCalls:
+        m_Calls: []
+  - text: '...And it hatched right under us. '
+    isEnd: 0
+    isQuestion: 0
+    choiceOption1: 0
+    choiceOption2: 0
+    option1Indexjump: 0
+    option2Indexjump: 0
+    startDialougeEvent:
+      m_PersistentCalls:
+        m_Calls: []
+    endDialougeEvent:
+      m_PersistentCalls:
+        m_Calls: []
+  - text: ' Cadet Mathews! You''re given new orders. You are to find parts to assemble
+      a X-cruiser Then escape and reroute to a another Galactic cruiser. Cadet Mathews!
+      You''re given new orders. You are to find parts to assemble a X-cruiser Then
+      escape and reroute to a another Galactic cruiser.'
+    isEnd: 0
+    isQuestion: 0
+    choiceOption1: 0
+    choiceOption2: 0
+    option1Indexjump: 0
+    option2Indexjump: 0
+    startDialougeEvent:
+      m_PersistentCalls:
+        m_Calls: []
+    endDialougeEvent:
+      m_PersistentCalls:
+        m_Calls: []
+  - text: I'm not coming with you kid. The Captain never abandons ship.
+    isEnd: 0
+    isQuestion: 0
+    choiceOption1: 0
+    choiceOption2: 0
+    option1Indexjump: 0
+    option2Indexjump: 0
+    startDialougeEvent:
+      m_PersistentCalls:
+        m_Calls: []
+    endDialougeEvent:
+      m_PersistentCalls:
+        m_Calls: []
+  NPCTransform: {fileID: 1664381654}
 --- !u!65 &1664381656
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -60410,8 +60481,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
-  m_Type: 1
+  m_Sprite: {fileID: 10913, guid: 0000000000000000f000000000000000, type: 0}
+  m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
