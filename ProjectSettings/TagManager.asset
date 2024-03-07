@@ -13,6 +13,7 @@ TagManager:
   - YellowTag
   - Alien
   - SlowTag
+  - TimerUI
   - SlowUI
   layers:
   - Default
