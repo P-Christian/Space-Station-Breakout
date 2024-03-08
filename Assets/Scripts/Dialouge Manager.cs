@@ -49,9 +49,10 @@ public class DialougeManager : MonoBehaviour
      private void DisableButtons()
      {
         option1Button.interactable = false;
+        option2Button.interactable = false;
 
-        option1Button.GetComponentInChildren<TMP_Text>().text = "...";
-
+        option1Button.GetComponentInChildren<TMP_Text>().text = "..";
+        option2Button.GetComponentInChildren<TMP_Text>().text =  "..";
      }
 
      private IEnumerator TurnCameraTowardsNPC(Transform NPC)
@@ -83,10 +84,13 @@ public class DialougeManager : MonoBehaviour
                     yield return StartCoroutine(TypeText(line.text));
 
                     option1Button.interactable = true;
+                    option2Button.interactable = true;
 
                     option1Button.GetComponentInChildren<TMP_Text>().text = line.choiceOption1;
+                    option2Button.GetComponentInChildren<TMP_Text>().text =  line.choiceOption2;
 
                     option1Button.onClick.AddListener(() => HandleOptionSelected(line.option1Indexjump));
+                    option1Button.onClick.AddListener(() => HandleOptionSelected(line.option2Indexjump));
 
                     yield return new WaitUntil(() => optionSelected);
                     
