@@ -11,13 +11,15 @@ public class BlueTimer : MonoBehaviour
     NewBehaviourScript playerScript;
     private void Start()
     {
-        blue = GameObject.FindGameObjectWithTag("BlueTag").GetComponent<BlueBuff>();
+        
         playerScript = GameObject.FindGameObjectWithTag("Player").GetComponent<NewBehaviourScript>();
+        blue = GameObject.FindGameObjectWithTag("BlueTag").GetComponent<BlueBuff>();
         gameObject.SetActive(true);
 
     }
     void Update()
     {
+        
         if (timeLeft > 0)
         {
             timeLeft -= Time.deltaTime;

@@ -38120,7 +38120,7 @@ GameObject:
   - component: {fileID: 1229917644}
   m_Layer: 0
   m_Name: Buffs
-  m_TagString: Untagged
+  m_TagString: Buffs
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -45258,7 +45258,7 @@ GameObject:
   - component: {fileID: 1377006128}
   m_Layer: 0
   m_Name: Components
-  m_TagString: Untagged
+  m_TagString: Components
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -50818,6 +50818,7 @@ GameObject:
   - component: {fileID: 1664381657}
   - component: {fileID: 1664381656}
   - component: {fileID: 1664381655}
+  - component: {fileID: 1664381659}
   m_Layer: 0
   m_Name: Cube
   m_TagString: Untagged
@@ -51048,6 +51049,26 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1664381653}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1664381659
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1664381653}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3272f0ecfc25a534299df099afb6cd3f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  interactText: Press E to interact
+  monster: {fileID: 1533343457}
+  componentUI: {fileID: 1691249368}
+  components: {fileID: 1377006127}
+  buff: {fileID: 1229917643}
+  yellowTimer: {fileID: 1310412120}
+  blueTimer: {fileID: 2130773331}
+  slowTimer: {fileID: 1772982298}
 --- !u!1001 &1671622521
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -56226,7 +56247,7 @@ GameObject:
   - component: {fileID: 1691249370}
   m_Layer: 5
   m_Name: CollectedComponents
-  m_TagString: Untagged
+  m_TagString: ComponentsUI
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -56579,15 +56600,15 @@ RectTransform:
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 1772982299}
-  - {fileID: 2130773332}
+  - {fileID: 307384951}
+  - {fileID: 497644599}
+  - {fileID: 911310939}
+  - {fileID: 1282540838}
   - {fileID: 1310412121}
   - {fileID: 1691249369}
-  - {fileID: 911310939}
+  - {fileID: 1772982299}
   - {fileID: 1931678815}
-  - {fileID: 497644599}
-  - {fileID: 307384951}
-  - {fileID: 1282540838}
+  - {fileID: 2130773332}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}

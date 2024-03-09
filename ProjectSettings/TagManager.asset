@@ -15,6 +15,9 @@ TagManager:
   - SlowTag
   - TimerUI
   - SlowUI
+  - Buffs
+  - Components
+  - ComponentsUI
   layers:
   - Default
   - TransparentFX

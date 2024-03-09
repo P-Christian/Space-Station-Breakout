@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Threading;
 using UnityEngine;
 using UnityEngine.Events;
 public class DialougeTrigger : MonoBehaviour
@@ -7,6 +8,7 @@ public class DialougeTrigger : MonoBehaviour
     [SerializeField] private List<dialogueString> dialougeStrings = new List<dialogueString>();
     [SerializeField] private Transform NPCTransform;
     
+
     private bool hasSpoken = false;
 
     private void OnTriggerEnter(Collider other)
@@ -16,6 +18,8 @@ public class DialougeTrigger : MonoBehaviour
             other.gameObject.GetComponent<DialougeManager>().DialougeStart(dialougeStrings, NPCTransform);
             hasSpoken = true;
         }
+
+        
     }
 }
 

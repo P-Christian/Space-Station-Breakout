@@ -8,12 +8,13 @@ public class GameManager : MonoBehaviour
     
     bool gameHasEnded = false;
     public float restartDelay = 1;
-    GameObject slowTimer;
+    
+    
 
     private void Start()
     {
-        slowTimer = GameObject.FindGameObjectWithTag("SlowUI");
-        slowTimer.SetActive(false);
+        
+        
     }
     public void EndGame()
     {
