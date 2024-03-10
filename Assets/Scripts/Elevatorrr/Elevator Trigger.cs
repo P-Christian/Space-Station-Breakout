@@ -37,10 +37,31 @@ public class TriggerPlatform : MonoBehaviour
 
     private void Update()
     {
+        //if (inRange && Input.GetKeyDown(KeyCode.F))
+        //{
+             //platform.canMove = true;
+             //Debug.Log("Hentai");
+        //}
         if (inRange && Input.GetKeyDown(KeyCode.F))
+    {
+        if (playerTransform == null)
         {
-             platform.canMove = true;
-             Debug.Log("Hentai");
+            playerTransform = GameObject.FindGameObjectWithTag("Player").transform;
+            if (playerTransform == null)
+            {
+                Debug.LogWarning("Player transform not found.");
+                return;
+            }
+        }
+        if (platform != null)
+        {
+            platform.canMove = true;
+            Debug.Log("Hentai");
+        }
+        else
+        {
+            Debug.LogWarning("Platform reference is null.");
+        }
     }
 }
 }
