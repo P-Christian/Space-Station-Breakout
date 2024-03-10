@@ -111,7 +111,7 @@ public class DialougeManager : MonoBehaviour
             foreach(char letter in text.ToCharArray())
             {
                 dialougeText.text += letter;
-                yield return new WaitForSeconds(typingSpeed);
+                yield return new WaitForSeconds(0.0000001f);
             }
             
             if(!dialougeList[currentDialougeIndex].isQuestion)
@@ -126,7 +126,7 @@ public class DialougeManager : MonoBehaviour
             currentDialougeIndex ++;
         }
 
-        private void DialougeStop()
+        public void DialougeStop()
         {
             StopAllCoroutines();
             dialougeText.text = "";
