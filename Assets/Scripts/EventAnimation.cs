@@ -20,7 +20,7 @@ public class EventAnimation : MonoBehaviour
         playerScript = GameObject.FindGameObjectWithTag("Player").GetComponent<NewBehaviourScript>();
         if (playerScript != null)
         {
-            playerScript.UpdateMovementSpeeds(newWalkSpeed: 10f, newRunSpeed: 15f);
+            playerScript.UpdateMovementSpeeds(newWalkSpeed: 8f, newRunSpeed: 12f);
             
         }
     }

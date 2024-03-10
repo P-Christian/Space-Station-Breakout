@@ -7,8 +7,8 @@ public class NewBehaviourScript : MonoBehaviour
     Animator animator;
     float velocity = 0.0f;
     public Camera playerCamera;
-    public float walkSpeed = 6f;
-    public float runSpeed = 12f;
+    public float walkSpeed = 15f;
+    public float runSpeed = 20f;
     public float jumpPower = 7f;
     public float gravity = 10f;
 
