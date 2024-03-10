@@ -7,7 +7,7 @@ public class ComponentScript : MonoBehaviour
     public Vector3 rotation;
     public string interactText = "Press E to interact";
     private Transform playerTransform; // Reference to the player's transform
-    private bool inRange = false;
+    
     private bool collected;
     [SerializeField] private string id;
 
@@ -38,20 +38,14 @@ public class ComponentScript : MonoBehaviour
                 otherPlayerInventory.ComponentsCollected();
             }
 
-            if (other.CompareTag("Player"))
-            {
-                inRange = true;
-            }
+            
         }
         
     }
 
     private void OnTriggerExit(Collider other)
     {
-        if (other.CompareTag("Player"))
-        {
-            inRange = false;
-        }
+        
     }
 
     void Update()

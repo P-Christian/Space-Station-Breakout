@@ -674,6 +674,7 @@ MonoBehaviour:
   myObject: {fileID: 41641031}
   rotation: {x: 20, y: 20, z: 20}
   item1: {fileID: 1377006128}
+  timerUI: {fileID: 1310412120}
 --- !u!135 &41641034
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -8096,11 +8097,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 8b6429b021d309849a5fb996a467e27f, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -65.2
+      value: -65.18
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 8b6429b021d309849a5fb996a467e27f, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 7.6
+      value: 7.53
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 8b6429b021d309849a5fb996a467e27f, type: 3}
       propertyPath: m_LocalPosition.z
@@ -14141,6 +14142,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   myObject: {fileID: 383301103}
   rotation: {x: 20, y: 20, z: 20}
+  timerUI: {fileID: 2130773331}
 --- !u!135 &383301106
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -15192,6 +15194,7 @@ MonoBehaviour:
   myObject: {fileID: 459815648}
   rotation: {x: 20, y: 20, z: 20}
   item1: {fileID: 1377006128}
+  timerUI: {fileID: 1310412120}
 --- !u!135 &459815651
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -22190,6 +22193,7 @@ MonoBehaviour:
   myObject: {fileID: 606680336}
   rotation: {x: 20, y: 20, z: 20}
   item1: {fileID: 1377006128}
+  timerUI: {fileID: 1310412120}
 --- !u!1 &619413992 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -4388194528348249980, guid: fbdd57c95c7730244aa05dd43605ae8a, type: 3}
@@ -29243,6 +29247,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   myObject: {fileID: 734601547}
   rotation: {x: 20, y: 20, z: 20}
+  timerUI: {fileID: 2130773331}
 --- !u!135 &734601550
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -30207,6 +30212,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   myObject: {fileID: 833579013}
   rotation: {x: 20, y: 20, z: 20}
+  timerUI: {fileID: 2130773331}
 --- !u!4 &842788474 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4962918641940504, guid: 3bb5add2e8abbe846a63c34f5d0aca58, type: 3}
@@ -52989,7 +52995,7 @@ Transform:
   m_GameObject: {fileID: 1657169425}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 9017.146, y: 183.7401, z: 40054.246}
+  m_LocalPosition: {x: 9017.15, y: 183.28, z: 40054.246}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -59666,6 +59672,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   myObject: {fileID: 1763846254}
   rotation: {x: 20, y: 20, z: 20}
+  timerUI: {fileID: 2130773331}
 --- !u!135 &1763846257
 SphereCollider:
   m_ObjectHideFlags: 0

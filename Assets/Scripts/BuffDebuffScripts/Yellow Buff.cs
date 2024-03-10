@@ -7,14 +7,15 @@ public class YellowBuff : MonoBehaviour
     public GameObject myObject;
     public Vector3 rotation;
     public Behaviour item1;
-    
+    [SerializeField] GameObject timerUI;
     YellowTimer timer;
     private void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Player"))
         {
+            timerUI.SetActive(true);
             timer = GameObject.FindGameObjectWithTag("YellowTimeTag").GetComponent<YellowTimer>();
-            timer.SetTime(46f);
+            timer.SetTime(15f);
             item1.enabled = true;
             gameObject.SetActive(false);
         }

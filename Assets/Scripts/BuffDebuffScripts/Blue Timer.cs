@@ -9,10 +9,12 @@ public class BlueTimer : MonoBehaviour
     [SerializeField] float timeLeft;
     BlueBuff blue;
     NewBehaviourScript playerScript;
+    GameObject timerUI;
     private void Start()
     {
         
         playerScript = GameObject.FindGameObjectWithTag("Player").GetComponent<NewBehaviourScript>();
+        timerUI = GameObject.FindGameObjectWithTag("BlueTimeTag");
         blue = GameObject.FindGameObjectWithTag("BlueTag").GetComponent<BlueBuff>();
         gameObject.SetActive(true);
 
@@ -20,14 +22,15 @@ public class BlueTimer : MonoBehaviour
     void Update()
     {
         
-        if (timeLeft > 0)
+        if (timeLeft > 1)
         {
             timeLeft -= Time.deltaTime;
         }
 
-        else if (timeLeft < 0)
+        else if (timeLeft < 1)
         {
             timeLeft = 0;
+            timerUI.SetActive(false);
             playerScript.UpdateMovementSpeeds(newWalkSpeed: 15f, newRunSpeed: 20f);
         }
 

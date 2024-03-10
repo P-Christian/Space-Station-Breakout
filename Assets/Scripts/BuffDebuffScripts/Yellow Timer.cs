@@ -8,22 +8,25 @@ public class YellowTimer : MonoBehaviour
     [SerializeField] TextMeshProUGUI buffTimer;
     [SerializeField] float timeLeft;
     YellowBuff yellow;
+    GameObject timerUI;
     private void Start()
     {
+        timerUI = GameObject.FindGameObjectWithTag("YellowTimeTag");
         yellow = GameObject.FindGameObjectWithTag("YellowTag").GetComponent<YellowBuff>();
         gameObject.SetActive(true);
         
     }
     void Update()
     {
-        if (timeLeft > 0)
+        if (timeLeft > 1)
         {
             timeLeft -= Time.deltaTime;
         }
 
-        else if (timeLeft < 0)
+        else if (timeLeft < 1)
         {
             timeLeft = 0;
+            timerUI.SetActive(false);
             yellow.SetBehavior("true");
         }
 
