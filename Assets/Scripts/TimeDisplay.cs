@@ -8,21 +8,16 @@ public class TimeDisplay : MonoBehaviour
     public TextMeshProUGUI lastSavedTimeText;
     void Start()
     {
+        int gameFinished = 5000;
         // Retrieve last saved time from PlayerPrefs
-        float lastSavedTime = PlayerPrefs.GetFloat("SavedElapsedTime");
+        int lastSavedTime = PlayerPrefs.GetInt("SavedElapsedTime");
         // Convert saved time to minutes and seconds
-        int minutes = Mathf.FloorToInt(lastSavedTime / 60);
-        int seconds = Mathf.FloorToInt(lastSavedTime % 60);
+        int score = gameFinished - lastSavedTime;
 
         // Update UI Text with last saved time
-        lastSavedTimeText.text = string.Format("{0:00}:{1:00}", minutes, seconds);
+        lastSavedTimeText.text = score.ToString();
 
         Debug.Log("Last saved time: " + lastSavedTime);
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 }

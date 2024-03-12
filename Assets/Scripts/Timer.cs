@@ -23,10 +23,11 @@ public class Timer : MonoBehaviour
 
     public void SaveTime()
     {
-        PlayerPrefs.SetFloat("SavedElapsedTime", elapsedTime);
+        int roundedTime = Mathf.RoundToInt(elapsedTime); // Round elapsedTime to the nearest whole number
+        PlayerPrefs.SetInt("SavedElapsedTime", roundedTime); // Save the rounded time as an integer
         PlayerPrefs.Save();
 
-        Debug.Log("Time saved: " + elapsedTime);
+        Debug.Log("Time saved: " + roundedTime);
     }
     //Note: you have a problem with loading the time in the right format
     //The timer loading is working, just in the wrong format. seek help in blackbox for more details
