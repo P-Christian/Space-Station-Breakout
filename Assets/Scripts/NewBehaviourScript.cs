@@ -11,6 +11,7 @@ public class NewBehaviourScript : MonoBehaviour
     public float runSpeed = 20f;
     public float jumpPower = 7f;
     public float gravity = 10f;
+    public AudioSource soundy;
 
 
     public float lookSpeed = 2f;
@@ -26,6 +27,7 @@ public class NewBehaviourScript : MonoBehaviour
     CharacterController characterController;
     void Start()
     {
+        soundy = GetComponent<AudioSource>();
         animator = GetComponent<Animator>();
         characterController = GetComponent<CharacterController>();
         Cursor.lockState = CursorLockMode.Locked;
@@ -41,10 +43,15 @@ public class NewBehaviourScript : MonoBehaviour
         if (forwardPressed)
         {
             animator.SetBool("isWalking", true);
+            
         }
         if (!forwardPressed)
         {
             animator.SetBool("isWalking", false);
+            if(soundy !=null)
+            {
+                soundy.Play();
+            }
         }
 
         if (forwardPressed && runPressed){

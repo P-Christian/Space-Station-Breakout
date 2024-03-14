@@ -9,6 +9,7 @@ public class PlatformMovement : MonoBehaviour
     [SerializeField] float speed;
     [SerializeField] int startPoint;
     [SerializeField] Transform[] points;
+    public AudioSource sound;
 
 
     int i;
@@ -19,6 +20,7 @@ public class PlatformMovement : MonoBehaviour
     {
         transform.position = points[startPoint].position;
         i = startPoint;
+        sound = GetComponent<AudioSource>();
     }
 
     void Update()
@@ -27,7 +29,11 @@ public class PlatformMovement : MonoBehaviour
         if(Vector3.Distance(transform.position,points[i].position)<0.01f)
         {
             canMove = false;
-
+            if (sound != null)
+            {
+                sound.Play();
+            } // Check if AudioSource is assigned
+                
             if(i == points.Length - 1)
             {
                     reverse = true;
@@ -54,6 +60,11 @@ public class PlatformMovement : MonoBehaviour
         
         if(canMove)
         {
+            if (sound != null)
+            {
+                sound.Play();
+            } // Check if AudioSource is assigned
+                
             transform.position = Vector3.MoveTowards(transform.position, points[i].position, speed * Time.deltaTime);
         }
         
