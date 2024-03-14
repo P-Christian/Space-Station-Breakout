@@ -8,9 +8,13 @@ public class Timer : MonoBehaviour
 {
     public TextMeshProUGUI timerText;
     public TimeSaver timeSaver;
-    public TextMeshProUGUI lastSavedTimeText;
 
     float elapsedTime;
+
+    void Start()
+    {
+        timerText.gameObject.SetActive(false);
+    }
     void Update()
     {
         elapsedTime += Time.deltaTime;
@@ -19,6 +23,12 @@ public class Timer : MonoBehaviour
         int seconds = Mathf.FloorToInt(elapsedTime % 60);
 
         timerText.text = string.Format("{0:00}:{1:00}", minutes, seconds);
+    }
+
+    public void StartTime()
+    {
+        elapsedTime = 0;
+        timerText.gameObject.SetActive(true);
     }
 
     public void SaveTime()

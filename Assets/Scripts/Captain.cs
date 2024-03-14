@@ -15,6 +15,7 @@ public class Captain : MonoBehaviour
     [SerializeField] GameObject yellowTimer;
     [SerializeField] GameObject blueTimer;
     [SerializeField] GameObject slowTimer;
+    public Timer timer;
     
 
     private bool inRange = false;
@@ -43,7 +44,7 @@ public class Captain : MonoBehaviour
 
     private void OnTriggerExit(Collider other)
     {
-        if (other.CompareTag("Player"))
+        if (other.gameObject == GameObject.FindGameObjectWithTag("Player"))
         {
             inRange = false;
             monster.SetActive(true);
@@ -53,14 +54,8 @@ public class Captain : MonoBehaviour
             yellowTimer.SetActive(true);
             blueTimer.SetActive(true);
             slowTimer.SetActive(true);
+            timer.StartTime();
             Debug.Log("Player Outside Range");
-        }
-    }
-    void Update()
-    {
-        if (inRange && Input.GetKeyDown(KeyCode.E))
-        {
-            
         }
     }
 }
