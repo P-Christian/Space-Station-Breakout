@@ -8,7 +8,7 @@ public class TimeDisplay : MonoBehaviour
     public TextMeshProUGUI lastSavedTimeText;
     void Start()
     {
-        int gameFinished = 5000;
+        int gameFinished = 2000;
         // Retrieve last saved time from PlayerPrefs
         int lastSavedTime = PlayerPrefs.GetInt("SavedElapsedTime");
         // Convert saved time to minutes and seconds
