@@ -13,16 +13,13 @@ public class NewBehaviourScript : MonoBehaviour
     public float gravity = 10f;
     public AudioSource soundy;
 
-
     public float lookSpeed = 2f;
     public float lookXLimit = 90f;
-
 
     Vector3 moveDirection = Vector3.zero;
     float rotationX = 0;
 
     public bool canMove = true;
-
 
     CharacterController characterController;
     void Start()
@@ -34,30 +31,26 @@ public class NewBehaviourScript : MonoBehaviour
         Cursor.visible = false;
     }
 
-    // Update is called once per frame
     void Update()
     {
         #region Handles Animation
         bool forwardPressed = Input.GetKey("w");
-        bool runPressed =Input.GetKey("left shift");
+        bool runPressed = Input.GetKey("left shift");
         if (forwardPressed)
         {
             animator.SetBool("isWalking", true);
-            
         }
         if (!forwardPressed)
         {
             animator.SetBool("isWalking", false);
-            if(soundy !=null)
-            {
-                soundy.Play();
-            }
         }
 
-        if (forwardPressed && runPressed){
+        if (forwardPressed && runPressed)
+        {
             animator.SetBool("isRunning", true);
         }
-        if (!forwardPressed || !runPressed){
+        if (!forwardPressed || !runPressed)
+        {
             animator.SetBool("isRunning", false);
         }
         #endregion
@@ -72,6 +65,12 @@ public class NewBehaviourScript : MonoBehaviour
         float curSpeedY = canMove ? (isRunning ? runSpeed : walkSpeed) * Input.GetAxis("Horizontal") : 0;
         float movementDirectionY = moveDirection.y;
         moveDirection = (forward * curSpeedX) + (right * curSpeedY);
+
+        if (canMove && !(curSpeedX != 0 || curSpeedY != 0))
+        {
+            Debug.Log("Playing sound");
+            soundy.Play();
+        }
 
         #endregion
 
@@ -95,8 +94,7 @@ public class NewBehaviourScript : MonoBehaviour
         #region Handles Rotation
         characterController.Move(moveDirection * Time.deltaTime);
 
-        if (canMove)
-        {
+        if (canMove){
             rotationX += -Input.GetAxis("Mouse Y") * lookSpeed;
             rotationX = Mathf.Clamp(rotationX, -lookXLimit, lookXLimit);
             playerCamera.transform.localRotation = Quaternion.Euler(rotationX, 0, 0);
@@ -105,6 +103,7 @@ public class NewBehaviourScript : MonoBehaviour
 
         #endregion
     }
+
     public void UpdateMovementSpeeds(float newWalkSpeed, float newRunSpeed)
     {
         walkSpeed = newWalkSpeed;
