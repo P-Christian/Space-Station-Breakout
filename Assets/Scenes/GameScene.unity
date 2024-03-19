@@ -35462,8 +35462,8 @@ MonoBehaviour:
   - {fileID: 54488744}
   agent: {fileID: 1060469397}
   animator: {fileID: 1060469392}
-  patroldetectionRadius: 80
-  chasedetectionRadius: 80
+  patroldetectionRadius: 50
+  chasedetectionRadius: 50
   attackRange: 8
   patrolSpeed: 10
   chaseSpeed: 20
