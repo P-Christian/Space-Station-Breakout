@@ -54685,7 +54685,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   myObject: {fileID: 1478985621}
-  rotation: {x: 0, y: 0, z: 0}
+  rotation: {x: 20, y: 20, z: 20}
 --- !u!1001 &1480974919
 PrefabInstance:
   m_ObjectHideFlags: 0
