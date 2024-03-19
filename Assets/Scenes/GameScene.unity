@@ -14877,8 +14877,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerCamera: {fileID: 489263482}
-  walkSpeed: 15
-  runSpeed: 20
+  walkSpeed: 8
+  runSpeed: 13
   jumpPower: 10
   gravity: 30
   soundy: {fileID: 432370064}
@@ -31792,11 +31792,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 8eb8aa05a2c16d7458bd8cf778aa25bf, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 40.15
+      value: -12.82
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 8eb8aa05a2c16d7458bd8cf778aa25bf, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 39991.32
+      value: 39937.62
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 8eb8aa05a2c16d7458bd8cf778aa25bf, type: 3}
       propertyPath: m_LocalRotation.w

@@ -31,7 +31,7 @@ public class BlueTimer : MonoBehaviour
         {
             timeLeft = 0;
             timerUI.SetActive(false);
-            playerScript.UpdateMovementSpeeds(newWalkSpeed: 15f, newRunSpeed: 20f);
+            playerScript.UpdateMovementSpeeds(newWalkSpeed: 8f, newRunSpeed: 13f);
         }
 
         int seconds = Mathf.FloorToInt(timeLeft % 60);
