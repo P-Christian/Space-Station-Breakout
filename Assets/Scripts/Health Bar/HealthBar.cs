@@ -47,6 +47,6 @@ public class HealthBar : MonoBehaviour
     {
         float targetFillAmount = currentHealth / maxHealth;
         healthBarFill.fillAmount = targetFillAmount;
-        healthText.text = Mathf.Round(currentHealth).ToString();
+        healthText.text = "HP: " + Mathf.Round(currentHealth).ToString();
     }
 }

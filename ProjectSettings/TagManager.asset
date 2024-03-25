@@ -18,6 +18,7 @@ TagManager:
   - Buffs
   - Components
   - ComponentsUI
+  - RedTag
   layers:
   - Default
   - TransparentFX

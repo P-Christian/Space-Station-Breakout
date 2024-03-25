@@ -12,7 +12,8 @@ public class NewBehaviourScript : MonoBehaviour
     public float jumpPower = 7f;
     public float gravity = 10f;
     public AudioSource soundy;
-
+    public AudioSource components;
+    public AudioSource buffs;
     public float lookSpeed = 2f;
     public float lookXLimit = 90f;
 
@@ -29,6 +30,21 @@ public class NewBehaviourScript : MonoBehaviour
         characterController = GetComponent<CharacterController>();
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
+    }
+
+    public void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.tag == "Components")
+        {
+            components.Play();
+        }
+
+        if (other.gameObject.tag == "RedTag" || other.gameObject.tag == "BlueTag" || other.gameObject.tag == "YellowTag" || other.gameObject.tag == "GreenTag")
+        {
+            buffs.Play();
+        }
+
+        
     }
 
     void Update()
