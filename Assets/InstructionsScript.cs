@@ -14,21 +14,16 @@ public class InstructionsScript : MonoBehaviour
         {
             if (Input.GetKeyDown(KeyCode.I))
             {
+                Cursor.visible = true;
+                Cursor.lockState = CursorLockMode.None;
                 instructionsOne.SetActive(true);
             }
         }
-        if (instructionsOne.activeSelf == true)
-        {
-            if (Input.GetKeyDown(KeyCode.Mouse0))
-            {
-                instructionsOne.SetActive(false);
-                instructionsTwo.SetActive(true);
-            }
-        }
-        if (Input.GetKeyDown(KeyCode.O))
-        {
-            instructionsOne.SetActive(false);
-            instructionsTwo.SetActive(false);
-        }
+    }
+
+    public void Exit()
+    {
+        Cursor.visible = false;
+        Cursor.lockState = CursorLockMode.Locked;
     }
 }
