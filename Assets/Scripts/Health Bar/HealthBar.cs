@@ -8,6 +8,7 @@ public class HealthBar : MonoBehaviour
     [SerializeField] private Image healthBarFill;
     [SerializeField] private Text healthText;
     public AudioSource takeDamage;
+    public AudioSource playerDeath;
 
     private bool isDead;
 
@@ -41,6 +42,7 @@ public class HealthBar : MonoBehaviour
         if (currentHealth <= 0 && !isDead)
         {
             isDead = true;
+            playerDeath.Play();
             GetComponent<GameOver>().gameOver();
         }
     }
