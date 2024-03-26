@@ -7,6 +7,7 @@ public class HealthBar : MonoBehaviour
     private float currentHealth;
     [SerializeField] private Image healthBarFill;
     [SerializeField] private Text healthText;
+    public AudioSource takeDamage;
 
     private bool isDead;
 
@@ -18,6 +19,7 @@ public class HealthBar : MonoBehaviour
 
     public void TakeDamage(float amount)
     {
+        takeDamage.Play();
         currentHealth -= amount;
         currentHealth = Mathf.Clamp(currentHealth, 0, maxHealth);
         UpdateHealthBar();
