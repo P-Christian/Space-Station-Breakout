@@ -8,6 +8,8 @@ public class PauseMenu : MonoBehaviour
     public static bool isGamePause = false;
 
     public GameObject pauseMenuUI;
+    public GameObject instructionsOne;
+    public GameObject instructionsTwo;
 
     public string sceneName;
     void Start()
@@ -46,12 +48,15 @@ public class PauseMenu : MonoBehaviour
         pauseMenuUI.SetActive(true);
         Time.timeScale = 0f;
         isGamePause = true;
+        instructionsOne.gameObject.SetActive(false);
+        instructionsTwo.gameObject.SetActive(false);
     }
 
     public void LoadingMenu()
     {
         Time.timeScale = 1f;
         SceneManager.LoadScene(sceneName);
+        PlayerPrefs.DeleteAll();
     }
 
     public void QuitGame()

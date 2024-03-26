@@ -7,6 +7,7 @@ public class GameOver : MonoBehaviour
     public GameObject DeathScreen;
     public void gameOver()
     {
+        Time.timeScale = 0f;
         DeathScreen.SetActive(true);
         Cursor.visible = true;
         Cursor.lockState = CursorLockMode.None;
