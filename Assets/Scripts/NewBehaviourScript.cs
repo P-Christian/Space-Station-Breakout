@@ -11,12 +11,12 @@ public class NewBehaviourScript : MonoBehaviour
     public float runSpeed = 20f;
     public float jumpPower = 7f;
     public float gravity = 10f;
-    public AudioSource soundy;
+    public AudioSource walkSound;
+    public AudioSource runSound;
     public AudioSource components;
     public AudioSource buffs;
     public float lookSpeed = 2f;
     public float lookXLimit = 90f;
-
     Vector3 moveDirection = Vector3.zero;
     float rotationX = 0;
 
@@ -25,7 +25,6 @@ public class NewBehaviourScript : MonoBehaviour
     CharacterController characterController;
     void Start()
     {
-        soundy = GetComponent<AudioSource>();
         animator = GetComponent<Animator>();
         characterController = GetComponent<CharacterController>();
         Cursor.lockState = CursorLockMode.Locked;
@@ -85,12 +84,17 @@ public class NewBehaviourScript : MonoBehaviour
         if (canMove && !(curSpeedX != 0 || curSpeedY != 0))
         {
             Debug.Log("Playing sound");
-            soundy.Play();
+            walkSound.Play();
+        }
+        if(!runPressed)
+        {
+            Debug.Log("Playing run!!");
+            runSound.Play();
         }
 
         #endregion
 
-        #region Handles Jumping
+        #region Handles Jumping 
         if (Input.GetButton("Jump") && canMove && characterController.isGrounded)
         {
             moveDirection.y = jumpPower;

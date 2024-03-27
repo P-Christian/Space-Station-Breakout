@@ -8,6 +8,8 @@ public class Animation : MonoBehaviour
     private Transform playerTransform;
     private bool inRange = false;
     private bool open = false;
+    public AudioSource opin;
+    public AudioSource klos;
     // Start is called before the first frame update
     void Start()
     {
@@ -44,12 +46,14 @@ public class Animation : MonoBehaviour
                 animator.SetBool("Enter", true);
                 Debug.Log("Open");
                 open = true;
+                opin.Play();
             }
             else
             {
                 animator.SetBool("Enter", false);
                 Debug.Log("Close");
                 open = false;
+                klos.Play();
             }
             
         }

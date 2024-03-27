@@ -6,6 +6,8 @@ public class AutoDoor : MonoBehaviour
 {
     private Transform playerTransform;
     Animator animator;
+    public AudioSource open;
+    public AudioSource close;
     // Start is called before the first frame update
     void Start()
     {
@@ -24,6 +26,7 @@ public class AutoDoor : MonoBehaviour
         if(other.CompareTag("Player"))
         {
             animator.SetBool("Enter", true);
+            open.Play();
         }
     }
      public void OnTriggerExit(Collider other)
@@ -31,6 +34,7 @@ public class AutoDoor : MonoBehaviour
         if(other.CompareTag("Player"))
         {
             animator.SetBool("Enter", false);
+            close.Play();
         }
     }
 }
