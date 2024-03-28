@@ -19,9 +19,9 @@ public class NewBehaviourScript : MonoBehaviour
     public float lookXLimit = 90f;
     Vector3 moveDirection = Vector3.zero;
     float rotationX = 0;
-
     public bool canMove = true;
-    float walkVolume = 0.25f;
+    public float walkVolume = 0.25f;
+    public float runVolume = 0.35f;
 
     CharacterController characterController;
     void Start()
@@ -95,6 +95,7 @@ public class NewBehaviourScript : MonoBehaviour
             {
                 Debug.Log("Playing run!!");
                 runSound.Play();
+                runSound.volume = runVolume;
             }
         }
         
@@ -103,13 +104,14 @@ public class NewBehaviourScript : MonoBehaviour
         {
             walkVolume = 0.01f;
             walkSound.volume = walkVolume;
+            runVolume = 0.35f;
+            runSound.volume = runVolume;
         }
         else
         {
             walkVolume = 0.25f;
             walkSound.volume = walkVolume;
         }
-
         #endregion
 
         #region Handles Jumping 

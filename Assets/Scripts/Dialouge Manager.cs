@@ -13,24 +13,32 @@ public class DialougeManager : MonoBehaviour
     [SerializeField] private Button option2Button;
     [SerializeField] private float typingSpeed = 0.05f;
     [SerializeField] private float  turnSpeed = 2f;
+    [SerializeField] public List<AudioSource> audioSourcesToMute;
+    [SerializeField] private GameObject player;
 
     private List<dialogueString> dialougeList;
     [Header("Player")]
-    [SerializeField] private NewBehaviourScript playerController;
+    [SerializeField] public NewBehaviourScript playerController;
     private Transform playerCamera;
      private int currentDialougeIndex = 0;
+     public NewBehaviourScript playerMove;
 
      private void Start()
      {
         dialougeParent.SetActive(false);
         playerCamera = Camera.main.transform;
-
+        player = GameObject.FindGameObjectWithTag("Player");
+        playerMove = player.GetComponent<NewBehaviourScript>();
      }
 
      public void DialougeStart(List<dialogueString> textToPrint, Transform NPC)
      {
         dialougeParent.SetActive(true);
         playerController.enabled = false;
+        foreach(var audioSource in audioSourcesToMute)
+        {
+            audioSource.volume = 0.01f;
+        }
 
         Cursor.lockState = CursorLockMode.None;
         Cursor.visible = true;
@@ -42,7 +50,8 @@ public class DialougeManager : MonoBehaviour
 
         DisableButtons();
 
-        StartCoroutine(PrintDialouge());        
+        StartCoroutine(PrintDialouge());      
+
 
      }
 
@@ -140,9 +149,11 @@ public class DialougeManager : MonoBehaviour
             dialougeParent.SetActive(false);
 
             playerController.enabled = true;
+            playerController.canMove = true;
 
             Cursor.lockState = CursorLockMode.Locked;
             Cursor.visible = false;
         }
+
 
 }
