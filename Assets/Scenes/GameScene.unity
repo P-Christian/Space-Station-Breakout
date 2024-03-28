@@ -15953,6 +15953,8 @@ MonoBehaviour:
   lookSpeed: 2
   lookXLimit: 90
   canMove: 1
+  walkVolume: 0.25
+  runVolume: 0.35
 --- !u!143 &432370054
 CharacterController:
   m_ObjectHideFlags: 0
@@ -16110,7 +16112,12 @@ MonoBehaviour:
   option2Button: {fileID: 488843374}
   typingSpeed: 0.03
   turnSpeed: 3
+  audioSourcesToMute:
+  - {fileID: 432370064}
+  - {fileID: 432370065}
+  player: {fileID: 432370052}
   playerController: {fileID: 432370053}
+  playerMove: {fileID: 432370053}
 --- !u!82 &432370064
 AudioSource:
   m_ObjectHideFlags: 0
