@@ -21,6 +21,7 @@ public class NewBehaviourScript : MonoBehaviour
     float rotationX = 0;
 
     public bool canMove = true;
+    float walkVolume = 0.25f;
 
     CharacterController characterController;
     void Start()
@@ -81,15 +82,32 @@ public class NewBehaviourScript : MonoBehaviour
         float movementDirectionY = moveDirection.y;
         moveDirection = (forward * curSpeedX) + (right * curSpeedY);
 
-        if (canMove && !(curSpeedX != 0 || curSpeedY != 0))
+        if(canMove)
         {
-            Debug.Log("Playing sound");
-            walkSound.Play();
+            if(canMove && !(curSpeedX != 0 || curSpeedY != 0))
+            {
+                Debug.Log("Playing sound");
+                walkSound.Play();
+                walkSound.volume = walkVolume;
+            }
+
+            if(!Input.GetKey(KeyCode.LeftShift))
+            {
+                Debug.Log("Playing run!!");
+                runSound.Play();
+            }
         }
-        if(!runPressed)
+        
+        
+        if(runPressed)
         {
-            Debug.Log("Playing run!!");
-            runSound.Play();
+            walkVolume = 0.01f;
+            walkSound.volume = walkVolume;
+        }
+        else
+        {
+            walkVolume = 0.25f;
+            walkSound.volume = walkVolume;
         }
 
         #endregion
