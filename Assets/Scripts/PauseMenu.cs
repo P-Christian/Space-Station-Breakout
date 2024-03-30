@@ -10,8 +10,8 @@ public class PauseMenu : MonoBehaviour
     public GameObject pauseMenuUI;
     public GameObject instructionsOne;
     public GameObject instructionsTwo;
-
     public string sceneName;
+    [SerializeField] public NewBehaviourScript playerControl;
     void Start()
     {
 
@@ -41,6 +41,11 @@ public class PauseMenu : MonoBehaviour
         isGamePause = false;
         Cursor.visible = false;
         Cursor.lockState = CursorLockMode.Locked;
+
+        playerControl.enabled = true;
+
+        UnlockShiftKey();
+
     }
 
     void Pause()
@@ -50,6 +55,10 @@ public class PauseMenu : MonoBehaviour
         isGamePause = true;
         instructionsOne.gameObject.SetActive(false);
         instructionsTwo.gameObject.SetActive(false);
+
+        playerControl.enabled = false;
+
+        LockShiftKey();
     }
 
     public void LoadingMenu()
@@ -64,4 +73,13 @@ public class PauseMenu : MonoBehaviour
         Application.Quit();
         Debug.Log("Quit!");
     }
+    public void LockShiftKey()
+    {
+        AudioListener.pause = true;
+    }
+    public void UnlockShiftKey()
+    {
+        AudioListener.pause = false;
+    }
+    
 }

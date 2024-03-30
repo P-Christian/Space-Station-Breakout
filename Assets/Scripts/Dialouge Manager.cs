@@ -39,7 +39,6 @@ public class DialougeManager : MonoBehaviour
         {
             audioSource.volume = 0.01f;
         }
-
         Cursor.lockState = CursorLockMode.None;
         Cursor.visible = true;
 
