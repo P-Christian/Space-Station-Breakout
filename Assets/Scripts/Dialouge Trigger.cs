@@ -7,7 +7,6 @@ public class DialougeTrigger : MonoBehaviour
 {
     [SerializeField] private List<dialogueString> dialougeStrings = new List<dialogueString>();
     [SerializeField] private Transform NPCTransform;
-    
 
     private bool hasSpoken = false;
 
