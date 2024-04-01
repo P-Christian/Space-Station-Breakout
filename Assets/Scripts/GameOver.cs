@@ -14,6 +14,7 @@ public class GameOver : MonoBehaviour
     }
     public void Restart()
     {
+        Time.timeScale = 1f;
         StaticData.valueToKeep = "0";
         PlayerPrefs.DeleteAll();
         SceneManager.LoadScene("GameScene");
@@ -21,5 +22,6 @@ public class GameOver : MonoBehaviour
     public void BackToMenu()
     {
         SceneManager.LoadScene("MainMenu");
+        PlayerPrefs.DeleteAll();
     }
 }
