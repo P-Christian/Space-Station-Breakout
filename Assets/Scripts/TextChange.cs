@@ -2,14 +2,16 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using static UnityEditor.Progress;
 
 public class TextChange : MonoBehaviour
 {
     public string hintText;
     public TextMeshProUGUI text;
-
+    public Behaviour doorOutline;
     private Transform playerTransform;
     private bool inRange;
+    [SerializeField] GameObject door;
     void Start()
     {
         playerTransform = GameObject.FindGameObjectWithTag("Player").transform;
@@ -21,6 +23,7 @@ public class TextChange : MonoBehaviour
         {
             inRange = true;
             text.text = hintText;
+            doorOutline.enabled = true;
             text.gameObject.SetActive(true);
         }
     }
@@ -30,7 +33,17 @@ public class TextChange : MonoBehaviour
         if(other.gameObject.tag == "Player")
         {
             inRange = false;
+            doorOutline.enabled = false;
             text.gameObject.SetActive(false);
+        }
+    }
+
+    public void SetBehavior(string noOutline)
+    {
+        if (noOutline == "true")
+        {
+            doorOutline.enabled = false;
+
         }
     }
 }

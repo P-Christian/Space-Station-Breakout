@@ -52,6 +52,7 @@ public class NewBehaviourScript : MonoBehaviour
         #region Handles Animation
         bool forwardPressed = Input.GetKey("w");
         bool runPressed = Input.GetKey("left shift");
+        bool running = forwardPressed && runPressed;
         if (forwardPressed)
         {
             animator.SetBool("isWalking", true);
@@ -61,11 +62,11 @@ public class NewBehaviourScript : MonoBehaviour
             animator.SetBool("isWalking", false);
         }
 
-        if (forwardPressed && runPressed)
+        if (running)
         {
             animator.SetBool("isRunning", true);
         }
-        if (!forwardPressed || !runPressed)
+        if (!running)
         {
             animator.SetBool("isRunning", false);
         }
@@ -77,8 +78,8 @@ public class NewBehaviourScript : MonoBehaviour
 
         // Press Left Shift to run
         bool isRunning = Input.GetKey(KeyCode.LeftShift);
-        float curSpeedX = canMove ? (isRunning ? runSpeed : walkSpeed) * Input.GetAxis("Vertical") : 0;
-        float curSpeedY = canMove ? (isRunning ? runSpeed : walkSpeed) * Input.GetAxis("Horizontal") : 0;
+        float curSpeedX = canMove ? (running ? runSpeed : walkSpeed) * Input.GetAxis("Vertical") : 0;
+        float curSpeedY = canMove ? (running ? runSpeed : walkSpeed) * Input.GetAxis("Horizontal") : 0;
         float movementDirectionY = moveDirection.y;
         moveDirection = (forward * curSpeedX) + (right * curSpeedY);
 
@@ -91,7 +92,7 @@ public class NewBehaviourScript : MonoBehaviour
                 walkSound.volume = walkVolume;
             }
 
-            if(!Input.GetKey(KeyCode.LeftShift))
+            if(!running)
             {
                 Debug.Log("Playing run!!");
                 runSound.Play();
@@ -100,7 +101,7 @@ public class NewBehaviourScript : MonoBehaviour
         }
         
         
-        if(runPressed)
+        if(running)
         {
             walkVolume = 0.01f;
             walkSound.volume = walkVolume;
