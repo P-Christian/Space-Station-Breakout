@@ -341,8 +341,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hintText: Talk to the Captain
   text: {fileID: 1704214395}
-  doorOutline: {fileID: 0}
-  door: {fileID: 0}
+  doorOutline: {fileID: 2094408243}
+  door: {fileID: 2094408241}
 --- !u!65 &11521573
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -9153,6 +9153,9 @@ PrefabInstance:
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 8b6429b021d309849a5fb996a467e27f, type: 3}
       insertIndex: -1
+      addedObject: {fileID: 2094408243}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 8b6429b021d309849a5fb996a467e27f, type: 3}
+      insertIndex: -1
       addedObject: {fileID: 2094408242}
   m_SourcePrefab: {fileID: 100100000, guid: 8b6429b021d309849a5fb996a467e27f, type: 3}
 --- !u!1 &291060842
@@ -9256,7 +9259,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 55173e572094f224d830bf2dadf65508, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 0.3
+  m_Volume: 0.2
   m_Pitch: 1
   Loop: 1
   Mute: 0
@@ -34516,7 +34519,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 8e7812da32fd333498ece93a5a2d1b06, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 1
+  m_Volume: 0.6
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -46070,7 +46073,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 0e6e5f9088c3bde4bb4f4719a55e03f9, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 1
+  m_Volume: 0.7
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -46799,7 +46802,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: f26f3bed059afc949b81ed8eb34d5a65, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 1
+  m_Volume: 0.25
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -71774,7 +71777,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 2ac023da3744ba041b20096750625514, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 1
+  m_Volume: 0.25
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -77035,6 +77038,24 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 126
   m_CollisionDetection: 0
+--- !u!114 &2094408243
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2094408241}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5fea29bb7c508c244a1f805a5fd3fc4d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  outlineMode: 0
+  outlineColor: {r: 1, g: 0.88235295, b: 0, a: 1}
+  outlineWidth: 4.5
+  precomputeOutline: 0
+  bakeKeys: []
+  bakeValues: []
 --- !u!1001 &2102277425
 PrefabInstance:
   m_ObjectHideFlags: 0
