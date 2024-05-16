@@ -13,7 +13,7 @@ PlayerSettings:
   useOnDemandResources: 0
   accelerometerFrequency: 60
   companyName: Beyond
-  productName: Astroneer
+  productName: Space Station Breakout
   defaultCursor: {fileID: 0}
   cursorHotspot: {x: 0, y: 0}
   m_SplashScreenBackgroundColor: {r: 0, g: 0, b: 0, a: 1}
@@ -285,7 +285,7 @@ PlayerSettings:
   - m_BuildTarget: 
     m_Icons:
     - serializedVersion: 2
-      m_Icon: {fileID: 2800000, guid: 9fc89d49c122ccc448cc0156e7aae30f, type: 3}
+      m_Icon: {fileID: 2800000, guid: 5edbca2a7e137004fa0fcda7e80e6380, type: 3}
       m_Width: 128
       m_Height: 128
       m_Kind: 0
