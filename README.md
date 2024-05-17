@@ -2,6 +2,9 @@
 Detailed information about the project can be found in the link below: 
 https://docs.google.com/document/d/1xLyo2cYDluoYVTXUHGf3QMchdB1c-6xq/edit?usp=sharing&ouid=107497996262746432611&rtpof=true&sd=true
 
+For the missing video assets of the project, Go to this link and download:
+https://drive.google.com/drive/folders/1udKJ-BynBr1DAt6refkCyEkb4d5IdnZO?usp=sharing
+
 ## Description
 Space Station Breakout is a 3D Horror-Role Playing game. It's story is all about a astronaut and his experience to escaped doomed space station.
 
