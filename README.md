@@ -32,12 +32,14 @@ Space Station Breakout is a 3D Horror-Role Playing game. It's story is all about
 
 :star: Danqzq.itch.io - Leaderboard Backend
 
-## Contributors
+## Meet the Team
 
-🧑‍🎨    [Labo, Jasper](https://github.com/JasperLabo) - Graphic Designer
+🧑📑    [Parayno, Christian](https://github.com/P-Christian) - Project Manager, Game Programmer
 
-📝      Mamaril, Karen - Document Writer
+🧑‍🎨    [Labo, Jasper](https://github.com/JasperLabo) - Game Artist & Game Programmer
 
-👨‍💻      [Mosuela, Bradley](https://github.com/bradPDev) - Coder
+👩📝      Mamaril, Karen - Document Writer
 
-👨‍💻      [Perlas, Earl](https://github.com/RaelpsNinvect) - Coder
+👨‍💻      [Mosuela, Bradley](https://github.com/bradPDev) - Game Programmer & Game Designer
+
+👨‍💻      [Perlas, Earl](https://github.com/RaelpsNinvect) - Game Programmer, Game Designer, and Game Artist
